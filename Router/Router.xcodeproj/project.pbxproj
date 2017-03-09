@@ -1,0 +1,384 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B04DC3261E70F87500783A6F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B04DC3251E70F87500783A6F /* main.m */; };
+		B04DC3291E70F87500783A6F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B04DC3281E70F87500783A6F /* AppDelegate.m */; };
+		B04DC32C1E70F87500783A6F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B04DC32B1E70F87500783A6F /* ViewController.m */; };
+		B04DC32F1E70F87500783A6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04DC32D1E70F87500783A6F /* Main.storyboard */; };
+		B04DC3311E70F87500783A6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B04DC3301E70F87500783A6F /* Assets.xcassets */; };
+		B04DC3341E70F87500783A6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04DC3321E70F87500783A6F /* LaunchScreen.storyboard */; };
+		B04DC33E1E70F8AC00783A6F /* YGRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = B04DC33D1E70F8AC00783A6F /* YGRouter.m */; };
+		B04DC3411E70F8C900783A6F /* UIViewController+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = B04DC3401E70F8C900783A6F /* UIViewController+Router.m */; };
+		B04DC3441E71205E00783A6F /* YGRouterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B04DC3431E71205E00783A6F /* YGRouterModel.m */; };
+		B04DC3471E71221D00783A6F /* YGRouterParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B04DC3461E71221D00783A6F /* YGRouterParser.m */; };
+		B04DC34B1E713BCD00783A6F /* YGPage1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = B04DC34A1E713BCD00783A6F /* YGPage1Controller.m */; };
+		B04DC34F1E71458700783A6F /* YGPage2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = B04DC34E1E71458700783A6F /* YGPage2Controller.m */; };
+		B04DC3521E71465200783A6F /* YGPage3Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = B04DC3511E71465200783A6F /* YGPage3Controller.m */; };
+		B04DC3551E714F8E00783A6F /* YGPage4Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = B04DC3541E714F8E00783A6F /* YGPage4Controller.m */; };
+		B04DC3581E71508200783A6F /* YGPage6Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = B04DC3571E71508200783A6F /* YGPage6Controller.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B04DC3211E70F87500783A6F /* Router.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Router.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B04DC3251E70F87500783A6F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B04DC3271E70F87500783A6F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B04DC3281E70F87500783A6F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B04DC32A1E70F87500783A6F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B04DC32B1E70F87500783A6F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B04DC32E1E70F87500783A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B04DC3301E70F87500783A6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B04DC3331E70F87500783A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B04DC3351E70F87500783A6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B04DC33C1E70F8AC00783A6F /* YGRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGRouter.h; sourceTree = "<group>"; };
+		B04DC33D1E70F8AC00783A6F /* YGRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGRouter.m; sourceTree = "<group>"; };
+		B04DC33F1E70F8C900783A6F /* UIViewController+Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Router.h"; sourceTree = "<group>"; };
+		B04DC3401E70F8C900783A6F /* UIViewController+Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Router.m"; sourceTree = "<group>"; };
+		B04DC3421E71205E00783A6F /* YGRouterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGRouterModel.h; sourceTree = "<group>"; };
+		B04DC3431E71205E00783A6F /* YGRouterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGRouterModel.m; sourceTree = "<group>"; };
+		B04DC3451E71221D00783A6F /* YGRouterParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGRouterParser.h; sourceTree = "<group>"; };
+		B04DC3461E71221D00783A6F /* YGRouterParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGRouterParser.m; sourceTree = "<group>"; };
+		B04DC3481E71369200783A6F /* YGRouterHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGRouterHeader.h; sourceTree = "<group>"; };
+		B04DC3491E713BCD00783A6F /* YGPage1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGPage1Controller.h; sourceTree = "<group>"; };
+		B04DC34A1E713BCD00783A6F /* YGPage1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGPage1Controller.m; sourceTree = "<group>"; };
+		B04DC34C1E713C7D00783A6F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		B04DC34D1E71458700783A6F /* YGPage2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGPage2Controller.h; sourceTree = "<group>"; };
+		B04DC34E1E71458700783A6F /* YGPage2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGPage2Controller.m; sourceTree = "<group>"; };
+		B04DC3501E71465200783A6F /* YGPage3Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGPage3Controller.h; sourceTree = "<group>"; };
+		B04DC3511E71465200783A6F /* YGPage3Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGPage3Controller.m; sourceTree = "<group>"; };
+		B04DC3531E714F8E00783A6F /* YGPage4Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGPage4Controller.h; sourceTree = "<group>"; };
+		B04DC3541E714F8E00783A6F /* YGPage4Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGPage4Controller.m; sourceTree = "<group>"; };
+		B04DC3561E71508200783A6F /* YGPage6Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGPage6Controller.h; sourceTree = "<group>"; };
+		B04DC3571E71508200783A6F /* YGPage6Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGPage6Controller.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B04DC31E1E70F87500783A6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B04DC3181E70F87500783A6F = {
+			isa = PBXGroup;
+			children = (
+				B04DC3231E70F87500783A6F /* Router */,
+				B04DC3221E70F87500783A6F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B04DC3221E70F87500783A6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B04DC3211E70F87500783A6F /* Router.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B04DC3231E70F87500783A6F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B04DC33B1E70F88F00783A6F /* Router */,
+				B04DC3271E70F87500783A6F /* AppDelegate.h */,
+				B04DC3281E70F87500783A6F /* AppDelegate.m */,
+				B04DC3481E71369200783A6F /* YGRouterHeader.h */,
+				B04DC34C1E713C7D00783A6F /* PrefixHeader.pch */,
+				B04DC32A1E70F87500783A6F /* ViewController.h */,
+				B04DC32B1E70F87500783A6F /* ViewController.m */,
+				B04DC3491E713BCD00783A6F /* YGPage1Controller.h */,
+				B04DC34A1E713BCD00783A6F /* YGPage1Controller.m */,
+				B04DC34D1E71458700783A6F /* YGPage2Controller.h */,
+				B04DC34E1E71458700783A6F /* YGPage2Controller.m */,
+				B04DC3501E71465200783A6F /* YGPage3Controller.h */,
+				B04DC3511E71465200783A6F /* YGPage3Controller.m */,
+				B04DC3531E714F8E00783A6F /* YGPage4Controller.h */,
+				B04DC3541E714F8E00783A6F /* YGPage4Controller.m */,
+				B04DC3561E71508200783A6F /* YGPage6Controller.h */,
+				B04DC3571E71508200783A6F /* YGPage6Controller.m */,
+				B04DC32D1E70F87500783A6F /* Main.storyboard */,
+				B04DC3301E70F87500783A6F /* Assets.xcassets */,
+				B04DC3321E70F87500783A6F /* LaunchScreen.storyboard */,
+				B04DC3351E70F87500783A6F /* Info.plist */,
+				B04DC3241E70F87500783A6F /* Supporting Files */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B04DC3241E70F87500783A6F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B04DC3251E70F87500783A6F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B04DC33B1E70F88F00783A6F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B04DC33C1E70F8AC00783A6F /* YGRouter.h */,
+				B04DC33D1E70F8AC00783A6F /* YGRouter.m */,
+				B04DC3421E71205E00783A6F /* YGRouterModel.h */,
+				B04DC3431E71205E00783A6F /* YGRouterModel.m */,
+				B04DC3451E71221D00783A6F /* YGRouterParser.h */,
+				B04DC3461E71221D00783A6F /* YGRouterParser.m */,
+				B04DC33F1E70F8C900783A6F /* UIViewController+Router.h */,
+				B04DC3401E70F8C900783A6F /* UIViewController+Router.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B04DC3201E70F87500783A6F /* Router */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B04DC3381E70F87500783A6F /* Build configuration list for PBXNativeTarget "Router" */;
+			buildPhases = (
+				B04DC31D1E70F87500783A6F /* Sources */,
+				B04DC31E1E70F87500783A6F /* Frameworks */,
+				B04DC31F1E70F87500783A6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Router;
+			productName = Router;
+			productReference = B04DC3211E70F87500783A6F /* Router.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B04DC3191E70F87500783A6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "黄德玉";
+				TargetAttributes = {
+					B04DC3201E70F87500783A6F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B04DC31C1E70F87500783A6F /* Build configuration list for PBXProject "Router" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B04DC3181E70F87500783A6F;
+			productRefGroup = B04DC3221E70F87500783A6F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B04DC3201E70F87500783A6F /* Router */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B04DC31F1E70F87500783A6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B04DC3341E70F87500783A6F /* LaunchScreen.storyboard in Resources */,
+				B04DC3311E70F87500783A6F /* Assets.xcassets in Resources */,
+				B04DC32F1E70F87500783A6F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B04DC31D1E70F87500783A6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B04DC34B1E713BCD00783A6F /* YGPage1Controller.m in Sources */,
+				B04DC3581E71508200783A6F /* YGPage6Controller.m in Sources */,
+				B04DC34F1E71458700783A6F /* YGPage2Controller.m in Sources */,
+				B04DC32C1E70F87500783A6F /* ViewController.m in Sources */,
+				B04DC3471E71221D00783A6F /* YGRouterParser.m in Sources */,
+				B04DC3551E714F8E00783A6F /* YGPage4Controller.m in Sources */,
+				B04DC3291E70F87500783A6F /* AppDelegate.m in Sources */,
+				B04DC33E1E70F8AC00783A6F /* YGRouter.m in Sources */,
+				B04DC3521E71465200783A6F /* YGPage3Controller.m in Sources */,
+				B04DC3411E70F8C900783A6F /* UIViewController+Router.m in Sources */,
+				B04DC3441E71205E00783A6F /* YGRouterModel.m in Sources */,
+				B04DC3261E70F87500783A6F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B04DC32D1E70F87500783A6F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B04DC32E1E70F87500783A6F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B04DC3321E70F87500783A6F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B04DC3331E70F87500783A6F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B04DC3361E70F87500783A6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B04DC3371E70F87500783A6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B04DC3391E70F87500783A6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Router/PrefixHeader.pch";
+				INFOPLIST_FILE = Router/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yiguo.Router;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B04DC33A1E70F87500783A6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Router/PrefixHeader.pch";
+				INFOPLIST_FILE = Router/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yiguo.Router;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B04DC31C1E70F87500783A6F /* Build configuration list for PBXProject "Router" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B04DC3361E70F87500783A6F /* Debug */,
+				B04DC3371E70F87500783A6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B04DC3381E70F87500783A6F /* Build configuration list for PBXNativeTarget "Router" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B04DC3391E70F87500783A6F /* Debug */,
+				B04DC33A1E70F87500783A6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B04DC3191E70F87500783A6F /* Project object */;
+}
