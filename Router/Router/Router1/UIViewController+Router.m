@@ -7,12 +7,10 @@
 //
 
 #import "UIViewController+Router.h"
-#import "YGRouter.h"
+#import "UIViewController+Router.h"
 #import <objc/runtime.h>
 
 @implementation UIViewController (Router)
-
-
 static char * extraParKey;
 -(void)setLaunchData:(id)extraParameters{
     objc_setAssociatedObject(self, &extraParKey, extraParameters, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -27,5 +25,4 @@ static char * blockKey;
 -(void (^)(id))routerBlock{
     return objc_getAssociatedObject(self, &blockKey);
 }
-
 @end

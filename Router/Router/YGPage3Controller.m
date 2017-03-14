@@ -14,6 +14,14 @@
 
 @implementation YGPage3Controller
 
+
+- (instancetype)init{
+    if (self = [super init]) {
+    //    self.navigationController.delegate = self;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor brownColor];

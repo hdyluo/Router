@@ -17,6 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    NSArray * vcArr = [[YGRouter sharedRouter] registRootStates:@[@"yg://View"]];
+    [YGRouter sharedRouter].openState(@"yg://View");
+    UINavigationController * vc = [[UINavigationController alloc] initWithRootViewController:vcArr[0]];
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

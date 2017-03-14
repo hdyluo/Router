@@ -19,7 +19,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.label];
-    self.label.text = [self.launchData objectForKey:@"par1"];
+    self.label.text = [self.launchData objectForKey:@"pars"];
    
 }
 
@@ -28,9 +28,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+}
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
     self.routerBlock(@"navigation转场回调了");
-    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+   [YGRouter sharedRouter]
+    .gotoState(@"yg://Page11");
 }
 
 - (void)dealloc{
