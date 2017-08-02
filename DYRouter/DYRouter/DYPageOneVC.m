@@ -39,18 +39,11 @@
 
 
 - (void)btnClicked:(UIButton *)btn{
-//    DYRouter.sharedRouter()
-//    .backToState(@"DY://Main",YES);
-    DYRouter.sharedRouter().back(YES,DYPageShowTypeDismiss);
+    DYRouter.sharedRouter().popTo(@"DY://Main#0");
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    DYRouter.sharedRouter()
-    .goToState(@"DY://PageOne#1",YES,DYPageShowTypePush)
-    .withPars(@{@"id":@"123",@"name":@"你好"})
-    .completion(^(id object){
-        
-    });
+    DYRouter.sharedRouter().goToState(@"DY://PageOne#1",YES).push();
 }
 
 @end

@@ -42,11 +42,12 @@
         case 0:
         {
             DYRouter.sharedRouter()
-                    .goToState(@"DY://PageOne",YES,DYPageShowTypePresent)
-                    .withPars(@{@"id":@"123",@"name":@"你好"})
-                    .completion(^(id object){
-                        NSLog(@"传回的参数是：%@",object);
-                    });
+            .goToState(@"DY://PageOne",YES)
+            .withPars(@{@"name":@"huang"})
+            .withBackAction(^(id obj){
+                RRLog(@"传回的参数是%@",obj);
+            })
+            .push();
         }
             break;
         case 1:

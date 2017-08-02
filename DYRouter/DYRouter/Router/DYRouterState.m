@@ -24,12 +24,12 @@
         NSLog(@"状态不能为空");
         return nil;
     }
-    
     NSURL * url = [NSURL URLWithString:urlStr];
     if (!url) {
         NSLog(@"url解析失败");
         return nil;
     }
+    
     DYRouterState * state = [[DYRouterState alloc] init];
     state.url = urlStr;
     state.scheme = url.scheme;
@@ -43,23 +43,11 @@
 
 - (void)_parseWithScheme{
     if (!self.scheme) {
-        self.routerType = DYRouterTypeOther;
-        NSLog(@"不能解析的scheme");
         return;
     }
-    if ([self.scheme.uppercaseString isEqualToString:@"DY"]) {  //页面模块
+    if ([self.scheme.uppercaseString isEqualToString:@"DY"]) {
         NSString * vcStr = [NSString stringWithFormat:@"%@%@VC",self.scheme.uppercaseString,self.host];
         self.name = vcStr;
-        self.routerType = DYRouterTypePage;
-        return;
-    }
-    if ([self.scheme.uppercaseString isEqualToString:@"FUNC"]) {
-        self.routerType = DYRouterTypeFunc;
-        return;
-    }
-    if ([self.scheme.uppercaseString isEqualToString:@"SIG"]) {
-        self.routerType = DYRouterTypeSingle;
-        return;
     }
 }
 

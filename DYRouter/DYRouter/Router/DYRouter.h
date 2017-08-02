@@ -19,51 +19,46 @@
 
 typedef void(^routerCompletionBlock)(id object);
 
-typedef NS_ENUM(NSInteger,DYPageShowType) {
-    DYPageShowTypePush,
-    DYPageShowTypePop,
-    DYPageShowTypePresent,
-    DYPageShowTypeDismiss
-};
-
 @interface DYRouter : NSObject
 
 + (DYRouter *(^)())sharedRouter;
 
 /**
-    切换到一个根状态，传入根状态实体，默认是个控制器
+ 注册根状态
+
+ @param states 路由表
+ @return 状态实例
+ */
+- (NSMutableArray *)registRootStates:(NSArray *)states;
+
+/**
+ stateEntity是控制器，或者路由
  */
 - (DYRouter *(^)(id stateEntity))switchToRootState;
 
-/**
- 跳转到指定的状态 可选push 或者 present
- */
-- (DYRouter *(^)(NSString *url,BOOL animated,DYPageShowType type))goToState;
+- (DYRouter *(^)(NSString *url,BOOL animated))goToState;
 
-/**
- 返回上级状态，可选dismiss 或者 pop
- */
-- (DYRouter *(^)(BOOL animated,DYPageShowType type))back;
-
-/**
- 返回到指定的状态，必须是pop
- */
-- (DYRouter *(^)(NSString *url,BOOL animated))backToState;
-
-/**
- 状态跳转的时候传递的参数
- */
 - (DYRouter *(^)(id pars))withPars;
 
-/**
- 状态跳转携带的动画方式，为了考虑路由和转场耦合性，这个不予实现
- */
-- (DYRouter *(^)(id animator))withAnimator;
+- (DYRouter * (^)(routerCompletionBlock block))withBackAction;
 
-/**
- 页面返回回调
- */
-- (void(^)(routerCompletionBlock block))completion;
+- (void (^)())push;
+
+- (void(^)())pop;
+
+- (void(^)(NSString * name))popTo;
+
+- (void(^)())popToRoot;
+
+- (void(^)())present;
+
+- (void(^)())dismiss;
+
+
+
+
+
+
 
 
 @end
