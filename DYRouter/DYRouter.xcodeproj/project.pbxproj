@@ -14,9 +14,7 @@
 		B004DA9A1EDFDE860078B623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B004DA981EDFDE860078B623 /* LaunchScreen.storyboard */; };
 		B004DAA71EDFDEC40078B623 /* UIViewController+DYRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = B004DAA61EDFDEC40078B623 /* UIViewController+DYRouter.m */; };
 		B004DAAA1EDFDF760078B623 /* DYRouterState.m in Sources */ = {isa = PBXBuildFile; fileRef = B004DAA91EDFDF760078B623 /* DYRouterState.m */; };
-		B004DAAD1EDFE13F0078B623 /* DYRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = B004DAAC1EDFE13F0078B623 /* DYRouter.m */; };
 		B004DAB61EE012E50078B623 /* DYPageOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B004DAB51EE012E50078B623 /* DYPageOneVC.m */; };
-		B004DAB91EE01A710078B623 /* UITabBarController+DYRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = B004DAB81EE01A710078B623 /* UITabBarController+DYRouter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,12 +31,8 @@
 		B004DAA61EDFDEC40078B623 /* UIViewController+DYRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DYRouter.m"; sourceTree = "<group>"; };
 		B004DAA81EDFDF760078B623 /* DYRouterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYRouterState.h; sourceTree = "<group>"; };
 		B004DAA91EDFDF760078B623 /* DYRouterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYRouterState.m; sourceTree = "<group>"; };
-		B004DAAB1EDFE13F0078B623 /* DYRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYRouter.h; sourceTree = "<group>"; };
-		B004DAAC1EDFE13F0078B623 /* DYRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYRouter.m; sourceTree = "<group>"; };
 		B004DAB41EE012E50078B623 /* DYPageOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYPageOneVC.h; sourceTree = "<group>"; };
 		B004DAB51EE012E50078B623 /* DYPageOneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYPageOneVC.m; sourceTree = "<group>"; };
-		B004DAB71EE01A710078B623 /* UITabBarController+DYRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+DYRouter.h"; sourceTree = "<group>"; };
-		B004DAB81EE01A710078B623 /* UITabBarController+DYRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+DYRouter.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +93,8 @@
 			children = (
 				B004DAA51EDFDEC40078B623 /* UIViewController+DYRouter.h */,
 				B004DAA61EDFDEC40078B623 /* UIViewController+DYRouter.m */,
-				B004DAB71EE01A710078B623 /* UITabBarController+DYRouter.h */,
-				B004DAB81EE01A710078B623 /* UITabBarController+DYRouter.m */,
 				B004DAA81EDFDF760078B623 /* DYRouterState.h */,
 				B004DAA91EDFDF760078B623 /* DYRouterState.m */,
-				B004DAAB1EDFE13F0078B623 /* DYRouter.h */,
-				B004DAAC1EDFE13F0078B623 /* DYRouter.m */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -186,8 +176,6 @@
 				B004DA921EDFDE850078B623 /* DYMainVC.m in Sources */,
 				B004DA8F1EDFDE850078B623 /* AppDelegate.m in Sources */,
 				B004DA8C1EDFDE850078B623 /* main.m in Sources */,
-				B004DAAD1EDFE13F0078B623 /* DYRouter.m in Sources */,
-				B004DAB91EE01A710078B623 /* UITabBarController+DYRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 //
 
 #import "DYMainVC.h"
-#import "DYRouter.h"
+
 
 @interface DYMainVC ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -38,44 +38,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    switch (indexPath.row) {
-        case 0:
-        {
-            DYRouter.sharedRouter()
-            .goToState(@"DY://PageOne",YES)
-            .withPars(@{@"name":@"huang"})
-            .withBackAction(^(id obj){
-                RRLog(@"传回的参数是%@",obj);
-            })
-            .push();
-        }
-            break;
-        case 1:
-        {
-            
-        }
-            break;
-        case 2:{
-           
-        }
-            break;
-        case 3:{
-           
-        }
-            break;
-        case 4:
-        {
-           
-        }
-            break;
-        case 5:
-        {
-           
-        }
-            break;
-        default:
-            break;
-    }
+    
 }
 #pragma mark  - 初始化
 - (UITableView *)tableView{
