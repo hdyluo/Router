@@ -7,7 +7,7 @@
 //
 
 #import "DYPageOneVC.h"
-#import "DYRouter.h"
+#import "UIViewController+DYRouter.h"
 
 @interface DYPageOneVC ()
 
@@ -16,6 +16,14 @@
 @end
 
 @implementation DYPageOneVC
+
+- (instancetype)init
+{
+    if (self = [super init]) {
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -39,11 +47,11 @@
 
 
 - (void)btnClicked:(UIButton *)btn{
-    DYRouter.sharedRouter().popTo(@"DY://Main#0");
+//    DYRouter.sharedRouter().popTo(@"DY://Main#0");
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    DYRouter.sharedRouter().goToState(@"DY://PageOne#1",YES).push();
+//    DYRouter.sharedRouter().goToState(@"DY://PageOne#1",YES).push();
 }
 
 @end

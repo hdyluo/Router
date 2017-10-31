@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DYBaseViewController.h"
 
-@interface DYMainVC : UIViewController
+@interface DYMainVC : DYBaseViewController
 
 
 @end

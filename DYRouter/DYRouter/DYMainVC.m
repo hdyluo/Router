@@ -7,6 +7,7 @@
 //
 
 #import "DYMainVC.h"
+#import "UIViewController+DYRouter.h"
 
 
 @interface DYMainVC ()<UITableViewDelegate,UITableViewDataSource>
@@ -21,8 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
-    self.datas = @[@"默认导航栏跳转",@"默认导航啦无动画跳转",@"自定义导航栏跳转",@"默认modal跳转",@"默认modal无动画跳转",@"自定义modal跳转"];
-  //  self.tabBarController.selectedIndex = 0;
+    self.datas = @[@"默认导航栏跳转",@"默认modal跳转"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -38,7 +38,23 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    switch (indexPath.row) {
+        case 0:{
+            [self pushToState:@"dy://PageOne" withPars:@{@"id":@1,@"name":@"小顾"} backAction:^(id data){
+                NSLog(@"有返回%@",data);
+            }];
+        }
+            
+            break;
+        case 1:
+            [self presentState:@"dy://PageOne" withPars:@{@"id":@2,@"name":@"xiaogu"} backAction:^(id data) {
+                NSLog(@"dismiss的数据是%@",data);
+            }];
+            break;
+        default:
+            break;
+    }
 }
 #pragma mark  - 初始化
 - (UITableView *)tableView{

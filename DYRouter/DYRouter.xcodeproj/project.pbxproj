@@ -15,6 +15,7 @@
 		B004DAA71EDFDEC40078B623 /* UIViewController+DYRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = B004DAA61EDFDEC40078B623 /* UIViewController+DYRouter.m */; };
 		B004DAAA1EDFDF760078B623 /* DYRouterState.m in Sources */ = {isa = PBXBuildFile; fileRef = B004DAA91EDFDF760078B623 /* DYRouterState.m */; };
 		B004DAB61EE012E50078B623 /* DYPageOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B004DAB51EE012E50078B623 /* DYPageOneVC.m */; };
+		B06981711FA8086D00802C10 /* DYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B06981701FA8086D00802C10 /* DYBaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		B004DAA91EDFDF760078B623 /* DYRouterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYRouterState.m; sourceTree = "<group>"; };
 		B004DAB41EE012E50078B623 /* DYPageOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYPageOneVC.h; sourceTree = "<group>"; };
 		B004DAB51EE012E50078B623 /* DYPageOneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYPageOneVC.m; sourceTree = "<group>"; };
+		B069816F1FA8086D00802C10 /* DYBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYBaseViewController.h; sourceTree = "<group>"; };
+		B06981701FA8086D00802C10 /* DYBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYBaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				B004DAA11EDFDE9D0078B623 /* Router */,
 				B004DA8D1EDFDE850078B623 /* AppDelegate.h */,
 				B004DA8E1EDFDE850078B623 /* AppDelegate.m */,
+				B069816F1FA8086D00802C10 /* DYBaseViewController.h */,
+				B06981701FA8086D00802C10 /* DYBaseViewController.m */,
 				B004DA901EDFDE850078B623 /* DYMainVC.h */,
 				B004DA911EDFDE850078B623 /* DYMainVC.m */,
 				B004DAB41EE012E50078B623 /* DYPageOneVC.h */,
@@ -172,6 +177,7 @@
 			files = (
 				B004DAAA1EDFDF760078B623 /* DYRouterState.m in Sources */,
 				B004DAA71EDFDEC40078B623 /* UIViewController+DYRouter.m in Sources */,
+				B06981711FA8086D00802C10 /* DYBaseViewController.m in Sources */,
 				B004DAB61EE012E50078B623 /* DYPageOneVC.m in Sources */,
 				B004DA921EDFDE850078B623 /* DYMainVC.m in Sources */,
 				B004DA8F1EDFDE850078B623 /* AppDelegate.m in Sources */,

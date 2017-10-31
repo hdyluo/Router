@@ -17,11 +17,19 @@
 @implementation UIViewController (DYRouter)
 
 
-+ (void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        
-    });
++ (instancetype)urlInstance:(NSString *)urlStr{
+    DYRouterState * s = [DYRouterState stateWithURLString:urlStr];
+    if (!s) {
+        DLog(@"解析状态失败");
+        return nil;
+    }
+    UIViewController * vc = [NSClassFromString(s.name) new];
+    vc.routerState = s;
+    if (!vc) {
+        DLog(@"当前控制器不存在,无法创建");
+        return nil;
+    }
+    return vc;
 }
 
 static char * extraParKey;
@@ -52,7 +60,7 @@ static char * routerStateKey;
 }
 
 
-- (void)pushToState:(NSString *)state withPars:(id)data backAction:(void (^)())action{
+- (void)pushToState:(NSString *)state withPars:(id)data backAction:(void (^)(id backData))action{
     if (!self.navigationController) {
         DLog(@"没有导航栏无法做跳转");
         return;
@@ -71,7 +79,7 @@ static char * routerStateKey;
     
     __block BOOL needReturn = NO;
     [self.navigationController.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (obj.routerState.tag == vc.routerState.tag) {
+        if (obj.routerState.tag == vc.routerState.tag && [obj.routerState.name isEqualToString:vc.routerState.name]) {
             DLog(@"存在同名的状态，请修改fragment,原因也可能是你连续点击造成的");
             *stop = YES;
             needReturn = YES;
@@ -99,7 +107,7 @@ static char * routerStateKey;
     __block UIViewController * popVC = nil;
     __block BOOL needReturn = YES;
     [self.navigationController.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj.routerState.name isEqualToString:s.name]) {
+        if ([obj.routerState.name isEqualToString:s.name] &&  [obj.routerState.name isEqualToString:s.name]) {
             *stop = YES;
             popVC = obj;
             needReturn = NO;
@@ -113,7 +121,7 @@ static char * routerStateKey;
     [self.navigationController popToViewController:popVC animated:YES];
 }
 
-- (void)presentState:(NSString *)state withPars:(id)data backAction:(void (^)())action{
+- (void)presentState:(NSString *)state withPars:(id)data backAction:(void (^)(id backData))action{
     DYRouterState * s = [DYRouterState stateWithURLString:state];
     if (!s) {
         DLog(@"解析状态失败");

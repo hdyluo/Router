@@ -31,7 +31,7 @@
     }
     
     DYRouterState * state = [[DYRouterState alloc] init];
-    state.url = urlStr;
+//    state.url = urlStr;
     state.scheme = url.scheme;
     state.frament = url.fragment;
     state.host = url.host;

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "UIViewController+DYRouter.h"
+
 
 @interface AppDelegate ()
 
@@ -16,18 +18,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    
-//    UITabBarController * tabVC = [[UITabBarController alloc] init];
-//    NSArray * vcs = [DYRouter.sharedRouter() registRootStates:@[@"DY://Main#0",@"DY://Main#1"]];
-//    NSMutableArray * navs = [NSMutableArray array];
-//    [vcs enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//        UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:obj];
-//        [navs addObject:nav];
-//    }];
-//    [tabVC setViewControllers:navs];
-//    self.window = [[UIWindow alloc] init];
-//    self.window.frame = [UIScreen mainScreen].bounds;
-//    self.window.rootViewController = tabVC;
+
+    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:[UIViewController urlInstance:@"dy://Main#0"]];
+    
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     return YES;
 }
