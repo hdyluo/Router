@@ -47,11 +47,12 @@
 
 
 - (void)btnClicked:(UIButton *)btn{
-//    DYRouter.sharedRouter().popTo(@"DY://Main#0");
+    [self pushToState:@"dy://PageOne#1" withPars:@{@"id":@"2",@"name":@"pageTwo"} backAction:^(id data) {
+        
+    }];
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    DYRouter.sharedRouter().goToState(@"DY://PageOne#1",YES).push();
 }
 
 @end

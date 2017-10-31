@@ -35,6 +35,7 @@
 static char * extraParKey;
 static char * blockKey;
 static char * routerStateKey;
+static char * dy_backDataKey;
 
 - (void)setDy_launchData:(id)dy_launchData{
     objc_setAssociatedObject(self, &extraParKey, dy_launchData, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -57,6 +58,12 @@ static char * routerStateKey;
 }
 - (void)setRouterState:(DYRouterState *)routerState{
     objc_setAssociatedObject(self, &routerStateKey, routerState, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (id)dy_backData{
+    return objc_getAssociatedObject(self, &dy_backDataKey);
+}
+- (void)setDy_backData:(id)dy_backData{
+    objc_setAssociatedObject(self, &dy_backDataKey, dy_backData, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 
@@ -94,7 +101,7 @@ static char * routerStateKey;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)popToState:(NSString *)state{
+- (void)popToState:(NSString *)state withData:(id)data{
     if (!self.navigationController) {
         DLog(@"没有导航栏无法做跳转");
         return;
@@ -111,6 +118,7 @@ static char * routerStateKey;
             *stop = YES;
             popVC = obj;
             needReturn = NO;
+            obj.dy_backData = data;         //多级页面返回时带回的数据
         }
     }];
     if (needReturn) {
@@ -132,6 +140,8 @@ static char * routerStateKey;
         DLog(@"当前控制器不存在，无法跳转");
         return;
     }
+    vc.dy_launchData = data;    //为下级页面指定启动数据
+    vc.dy_routerBlock = action; //为下级页面指定路由回调
     [self presentViewController:vc animated:YES completion:nil];
 }
 
