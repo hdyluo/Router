@@ -83,7 +83,7 @@ static char * dy_backDataKey;
         DLog(@"当前控制器不存在，无法跳转");
         return;
     }
-    
+    vc.routerState = s;
     __block BOOL needReturn = NO;
     [self.navigationController.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if (obj.routerState.tag == vc.routerState.tag && [obj.routerState.name isEqualToString:vc.routerState.name]) {
@@ -95,7 +95,7 @@ static char * dy_backDataKey;
     if (needReturn) {
         return;
     }
-
+    
     vc.dy_launchData = data;    //为下级页面指定启动数据
     vc.dy_routerBlock = action; //为下级页面指定路由回调
     [self.navigationController pushViewController:vc animated:YES];
@@ -140,6 +140,7 @@ static char * dy_backDataKey;
         DLog(@"当前控制器不存在，无法跳转");
         return;
     }
+    vc.routerState = s;
     vc.dy_launchData = data;    //为下级页面指定启动数据
     vc.dy_routerBlock = action; //为下级页面指定路由回调
     [self presentViewController:vc animated:YES completion:nil];

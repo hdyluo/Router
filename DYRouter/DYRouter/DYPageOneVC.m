@@ -53,6 +53,7 @@
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self popToState:@"dy://Main" withData:@"你好"];
 }
 
 @end

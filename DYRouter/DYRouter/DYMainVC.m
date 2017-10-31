@@ -25,6 +25,13 @@
     self.datas = @[@"默认导航栏跳转",@"默认modal跳转"];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if (self.dy_backData) {
+        NSLog(@"有数据：%@",self.dy_backData);
+    }
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.datas.count;
 }
