@@ -15,9 +15,42 @@
 @property(nonatomic,copy) NSString * frament;
 @property(nonatomic,copy) NSString * parameters;
 
+
 @end
 
 @implementation DYRouterState
+
+static NSMutableArray * uriTypes;
+
++ (void)load{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self registerWithScheme:@"DY" tail:@"VC"];
+    });
+}
+
+
++ (void)registerWithScheme:(NSString *)scheme tail:(NSString *)tail{
+    if (!uriTypes) {
+        uriTypes = [NSMutableArray array];
+    }
+    id data = @{
+                @"scheme":scheme,
+                @"tail":tail
+                };
+    __block BOOL needAddData = YES;
+    [uriTypes enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString * schemeT = [obj objectForKey:@"scheme"];
+        NSString * tailT = [obj objectForKey:@"tail"];
+        if ([scheme isEqualToString:schemeT] && [tail isEqualToString:tailT]) {
+            needAddData = NO;
+            * stop = YES;
+        }
+    }];
+    if (needAddData) {
+        [uriTypes addObject:data];
+    }
+}
 
 + (instancetype)stateWithURLString:(NSString *)urlStr{
     if (!urlStr) {
@@ -31,7 +64,7 @@
     }
     
     DYRouterState * state = [[DYRouterState alloc] init];
-//    state.url = urlStr;
+    state.url = urlStr;
     state.scheme = url.scheme;
     state.frament = url.fragment;
     state.host = url.host;
@@ -45,10 +78,15 @@
     if (!self.scheme) {
         return;
     }
-    if ([self.scheme.uppercaseString isEqualToString:@"DY"]) {
-        NSString * vcStr = [NSString stringWithFormat:@"%@%@VC",self.scheme.uppercaseString,self.host];
-        self.name = vcStr;
-    }
+    [uriTypes enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString * schemeT = [obj objectForKey:@"scheme"];
+        NSString * tailT = [obj objectForKey:@"tail"];
+        if ([self.scheme.uppercaseString isEqualToString:schemeT]) {
+            NSString * vcStr = [NSString stringWithFormat:@"%@%@%@",self.scheme.uppercaseString,self.host,tailT];
+            self.name = vcStr;
+            *stop = YES;
+        }
+    }];
 }
 
 - (void)_parseWithFrament{
